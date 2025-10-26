@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "empowering_the_nation_app",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502
+	}
+}

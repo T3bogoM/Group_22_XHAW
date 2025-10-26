@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering the Nation | Course Summaries</title>
+     <link rel="stylesheet" href="styles.css">   
+</head>
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <div class="nav-group">
+              <a href="index.html" class="logo-link"><img src="_private/precious radebe sme logo.png" alt="Empowering the Nation Logo" style="height:40px;border-radius:6px;vertical-align:middle"></a>
+            </div>
+            <div class="nav-group">
+              <a href="index.html">Home</a>
+              <div class="dropdown">
+                <button class="dropbtn">Programs</button>
+                <div class="dropdown-content">
+                  <a href="course_summaries.html">Course Summaries</a>
+                  <a href="course_details.html">Course Details</a>
+                </div>
+              </div>
+              <a href="fee_calculator.html">Fee Calculator</a>
+              <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <h1>Course Summaries</h1>
+         <p>Explore practical programs designed to build confidence, experience and employable skills.</p>
+    </header>
+
+<main class="course-grid">
+
+  <a href="course_details.html?course=landscaping" class="course-card">
+    <img src="_private/landscaping image 06.jfif" alt="Landscaping Course" style="width:400px;height:400px;">
+    <h2>Landscaping</h2>
+    <p><strong>Duration:</strong> Six months</p>
+    <p><strong>Occupation:</strong> Landscaper / Garden Designer</p>
+    <p><strong>Fee:</strong> R1500</p>
+  </a>
+
+  <a href="course_details.html?course=sewing" class="course-card">
+    <img src="_private/sewing image 02.jfif" alt="Sewing Course" style="width:400px;height:400px;">
+    <h2>Sewing</h2>
+    <p><strong>Duration:</strong> Six months</p>
+    <p><strong>Occupation:</strong> Tailor / Clothing Maker</p>
+    <p><strong>Fee:</strong> R1200</p>
+  </a>
+
+  <a href="course_details.html?course=life-skills" class="course-card">
+    <img src="_private/life skills image 02.jfif" alt="Life Skills Course" style="width:400px;height:400px;">
+    <h2>Life Skills and Personal Development</h2>
+    <p><strong>Duration:</strong> Six weeks</p>
+    <p><strong>Occupation:</strong> Personal Development</p>
+    <p><strong>Fee:</strong> R800</p>
+  </a>
+
+  <a href="course_details.html?course=child-minding" class="course-card">
+    <img src="_private/child mining image 02.jfif" alt="Child Minding Course" style="width:400px;height:400px;">
+    <h2>Child Minding</h2>
+    <p><strong>Duration:</strong> Six weeks</p>
+    <p><strong>Occupation:</strong> Nanny / Childcare Assistant</p>
+    <p><strong>Fee:</strong> R1000</p>
+  </a>
+
+  <a href="course_details.html?course=cooking" class="course-card">
+    <img src="_private/cooking image 01.jfif" alt="Cooking Course" style="width:400px;height:400px;">
+    <h2>Cooking and Catering Basics</h2>
+    <p><strong>Duration:</strong> Six months</p>
+    <p><strong>Occupation:</strong> Cook / Catering Assistant</p>
+    <p><strong>Fee:</strong> R1400</p>
+  </a>
+
+  <a href="course_details.html?course=garden-maintenance" class="course-card">
+    <img src="_private/garden maintainence image 01.jfif" alt="Garden Maintenance Course" style="width:400px;height:400px;">
+    <h2>Garden Maintenance</h2>
+    <p><strong>Duration:</strong> Six weeks</p>
+    <p><strong>Occupation:</strong> Groundskeeper</p>
+    <p><strong>Fee:</strong> R900</p>
+  </a>
+
+  <a href="course_details.html?course=first-aid" class="course-card">
+    <img src="_private/firs aid image 01.jfif" alt="First Aid Course" style="width:400px;height:400px;">
+    <h2>First Aid</h2>
+    <p><strong>Duration:</strong> Six weeks</p>
+    <p><strong>Occupation:</strong> Health and Safety Assistant</p>
+    <p><strong>Fee:</strong> R700</p>
+  </a>
+
+  <a href="course_details.html?course=domestic-management" class="course-card">
+    <img src="_private/domestic manager image 02.jfif" alt="Domestic Management Course" style="width:400px;height:400px;">
+    <h2>Domestic Management</h2>
+    <p><strong>Duration:</strong> Six months</p>
+    <p><strong>Occupation:</strong> House Manager</p>
+    <p><strong>Fee:</strong> R1600</p>
+  </a>
+
+  <a href="course_details.html?course=eco-gardening" class="course-card">
+    <img src="_private/eco-friendly gardening image 01.jfif" alt="Eco Gardening Course" style="width:400px;height:400px;">
+    <h2>Eco-Friendly Gardening</h2>
+    <p><strong>Duration:</strong> Six months</p>
+    <p><strong>Occupation:</strong> Sustainable Gardener</p>
+    <p><strong>Fee:</strong> R1300</p>
+  </a>
+
+</main>
+
+
+     <footer>
+        <p>&copy; 2025 Empowering the Nation. All rights reserved.</p>
+                <nav class="top-nav">
+            <a href="index.html">Home</a>
+            <a href="course_summaries.html">Course Summaries</a>
+            <a href="course_details.html">Course Details</a>
+            <a href="fee_calculator.html">Fee Calculator</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.dropdown .dropbtn').forEach(btn => {
+        const dropdown = btn.closest('.dropdown');
+        btn.setAttribute('aria-haspopup', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isOpen = dropdown.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(isOpen));
+        });
+      });
+      document.addEventListener('click', (e) => {
+        document.querySelectorAll('.dropdown.open').forEach(d => {
+          if (!d.contains(e.target)) {
+            d.classList.remove('open');
+            const b = d.querySelector('.dropbtn');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.dropdown.open').forEach(d => {
+            d.classList.remove('open');
+            const b = d.querySelector('.dropbtn');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+    });
+    </script>
+</body>
+</html>

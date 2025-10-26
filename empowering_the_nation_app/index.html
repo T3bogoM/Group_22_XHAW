@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering the Nation</title>
+    <link rel="stylesheet" href="styles.css">   
+
+</head>
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <div class="nav-group">
+              <a href="index.html" class="logo-link"><img src="_private/precious radebe sme logo.png" alt="Empowering the Nation Logo" style="height:40px;border-radius:6px;vertical-align:middle"></a>
+            </div>
+            <div class="nav-group">
+              <a href="index.html">Home</a>
+              <div class="dropdown">
+                <button class="dropbtn">Programs</button>
+                <div class="dropdown-content">
+                  <a href="course_summaries.html">Course Summaries</a>
+                  <a href="course_details.html">Course Details</a>
+                </div>
+              </div>
+              <a href="fee_calculator.html">Fee Calculator</a>
+              <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+      
+         <h1 class="main-heading">Empowering the Nation</h1>
+
+        <section class="hero">
+          <h1>Practical skills for real careers</h1>
+          <p>Learn job-ready skills in gardening, home management, catering, first aid and more. Our hands-on programs help you grow confidence and income — fast.</p>
+          <div class="button-group">
+            <a href="course_summaries.html" class="btn">Explore Programs</a>
+            <a href="fee_calculator.html" class="btn">Estimate Fees</a>
+          </div>
+        </section>
+    </header>
+
+    <main>
+        <section>
+
+        </section>
+
+<section class="services">
+  <h2>What we offer</h2>
+  <p>
+    At Empowering the Nation, we combine short skills courses with mentorship and practical experience. From eco‑gardening to domestic management, our programs are built to help you start working, start earning, and keep growing.
+  </p>
+</section>
+
+<section class="get-started">
+  <h2>Get Started</h2>
+  <p>Take the first step toward building a better future today.</p>
+  
+  <div class="button-group">
+    <a href="course_details.html" class="btn">View Courses</a>
+    <a href="contact.html" class="btn">Contact Us</a>
+    <a href="fee_calculator.html" class="btn">Fee Calculator</a>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+           <p>© 2025 Empowering the Nation. All rights reserved.</p>
+        <nav class="top-nav">
+            <a href="index.html">Home</a>
+            <a href="course_summaries.html">Course Summaries</a>
+            <a href="course_details.html">Course Details</a>
+            <a href="fee_calculator.html">Fee Calculator</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.dropdown .dropbtn').forEach(btn => {
+        const dropdown = btn.closest('.dropdown');
+        btn.setAttribute('aria-haspopup', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isOpen = dropdown.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(isOpen));
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        document.querySelectorAll('.dropdown.open').forEach(d => {
+          if (!d.contains(e.target)) {
+            d.classList.remove('open');
+            const b = d.querySelector('.dropbtn');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.dropdown.open').forEach(d => {
+            d.classList.remove('open');
+            const b = d.querySelector('.dropbtn');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+    });
+    </script>
+</body>
+</html>

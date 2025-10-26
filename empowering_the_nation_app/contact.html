@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Empowering the Nation</title>
+     <link rel="stylesheet" href="styles.css">   
+</head>
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <div class="nav-group">
+              <a href="index.html" class="logo-link"><img src="_private/precious radebe sme logo.png" alt="Empowering the Nation Logo" style="height:40px;border-radius:6px;vertical-align:middle"></a>
+            </div>
+            <div class="nav-group">
+              <a href="index.html">Home</a>
+              <div class="dropdown">
+                <button class="dropbtn">Programs</button>
+                <div class="dropdown-content">
+                  <a href="course_summaries.html">Course Summaries</a>
+                  <a href="course_details.html">Course Details</a>
+                </div>
+              </div>
+              <a href="fee_calculator.html">Fee Calculator</a>
+              <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <h1>Contact Us</h1>
+    </header>
+    <main>
+        
+         <section class="contact-content">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or would like more information about our courses and services, please feel free to reach out to us.</p>
+
+
+         <div class="contact-info">
+            <p><strong>Phone:</strong> 010 555 1234</p>
+            <p><strong>Email:</strong> <a href="mailto:hello@skillspring.org">hello@skillspring.org</a></p>
+            <p><strong>Address:</strong> Sandton, Johannesburg, South Africa</p>
+         </div>
+
+         <section class="business-hours">
+            <h2>Business Hours</h2>
+            <ul>
+                <li><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</li>
+                <li><strong>Saturday:</strong> 10:00 AM - 4:00 PM</li>
+                <li><strong>Sunday:</strong> Closed</li>
+            </ul>
+        </section>
+
+     <section>
+        <h2>Find Us Here</h2>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.162215871114!2d28.058!3d-26.107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sSandton!2sJohannesburg!5e0!3m2!1sen!2sza!4v1680000000000"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+     </section>
+
+       <div class="contact-container">
+         <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form> 
+         </section>
+       </div>
+
+        
+
+ <footer>
+        <p>&copy; 2025 Empowering the Nation. All rights reserved.</p>
+                <nav class="top-nav">
+            <a href="index.html">Home</a>
+            <a href="course_summaries.html">Course Summaries</a>
+            <a href="course_details.html">Course Details</a>
+            <a href="fee_calculator.html">Fee Calculator</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.dropdown .dropbtn').forEach(btn => {
+        const dropdown = btn.closest('.dropdown');
+        btn.setAttribute('aria-haspopup', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isOpen = dropdown.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(isOpen));
+        });
+      });
+      document.addEventListener('click', (e) => {
+        document.querySelectorAll('.dropdown.open').forEach(d => {
+          if (!d.contains(e.target)) {
+            d.classList.remove('open');
+            const b = d.querySelector('.dropbtn');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.dropdown.open').forEach(d => {
+            d.classList.remove('open');
+            const b = d.querySelector('.dropbtn');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+    });
+    </script>
+</body>
+</html>
